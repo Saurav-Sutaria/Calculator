@@ -36,18 +36,32 @@ function findAnswer(){
                 result = Number(num1) + Number(num2)
                 stackNum.unshift(result)
                 break
+
             case '-':
                 result = Number(num1) - Number(num2)
                 stackNum.unshift(result)
                 break
+
             case '*':
                 result = Number(num1) * Number(num2)
                 stackNum.unshift(result)
                 break
+
             case '/':
                 result = Number(num1) / Number(num2)
                 stackNum.unshift(result)
                 break
+
+            case '^':
+                result = Number(num1) ** Number(num2)
+                stackNum.unshift(result)
+                break
+
+            case 'root':
+                result = Number(num1) ** (1 / Number(num2))
+                stackNum.unshift(result)
+                break
+            
         }
     }
     console.log(stackNum)
